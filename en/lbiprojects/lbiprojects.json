@@ -1,0 +1,6 @@
+{
+  "tags": [
+    "lbiprojects"
+  ],
+  "layout": "layouts/base.njk"
+}

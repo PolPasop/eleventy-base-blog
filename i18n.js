@@ -5,18 +5,9 @@ module.exports = {
     next: "Next",
     nav: {
       home: "Home",
-      archive: "Archive",
       about: "About Me",
-    }
-  },
-  es: {
-    also: "Esta página también está disponible en:",
-    previous: "Anterior",
-    next: "Siguiente",
-    nav: {
-      home: "Página de inicio",
-      archive: "Archivo",
-      about: "Acerca de mí",
+      projects: "Projects",
+      contact: "Contact"
     }
   }
 };

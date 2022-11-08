@@ -1,0 +1,9 @@
+<nav>
+  test ij
+</nav>
+
+<style>
+  nav {
+    border: solid 2px red;
+  }
+</style>

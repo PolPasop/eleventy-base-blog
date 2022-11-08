@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="{{ lang or metadata.language }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title or metadata.title }}</title>
+    <meta name="description" content="{{ description or metadata.description }}">
+
+    {#- Uncomment this if you’d like folks to know that you used Eleventy to build your site!  #}
+    <meta name="generator" content="{{ eleventy.generator }}">
+
+    <link rel="stylesheet" href="/css/prism-theme.css">
+    <link rel="stylesheet" href="/css/prism-diff.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
+    <link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ metadata.title }}">
+
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Figtree">
+
+
+    <style @html="getCSS(page.url)"></style>
+
+
+    {%- set alternateUrls = page.url | locale_links %}
+    {% if alternateUrls.length %}
+    <link rel="alternate" hreflang="{{ lang or metadata.language }}" href="{{ page.url | htmlBaseUrl(metadata.url) }}">
+    {%- for link in alternateUrls %}
+    <link rel="alternate" hreflang="{{ link.lang }}" href="{{ link.url | htmlBaseUrl(metadata.url) }}">
+    {%- endfor %}
+    {%- endif %}
+
+    <script type="module" src="/js/index.js"></script>
+    
+  </head>
+  <body @html="content">
+    <header>
+      <h1 class="home"><a href="/">{{ metadata.title }}</a></h1>
+
+      {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
+      {% renderTemplate "webc" %}
+      <pi-navigation webc:nokeep>Test</pi-navigation>
+      {% endrenderTemplate %}
+
+      <ul class="nav">
+      {%- for entry in collections.all | eleventyNavigation %}
+        <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}"><a href="{{ entry.url }}">{{ entry.title | i18n }}</a></li>
+      {%- endfor %}
+      </ul>
+
+      <button class="theme-toggle" id="theme-toggle" title="Toggles light & dark" aria-label="auto" aria-live="polite">
+        <svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
+          <mask class="moon" id="moon-mask">
+            <rect x="0" y="0" width="100%" height="100%" fill="white" />
+            <circle cx="24" cy="10" r="6" fill="black" />
+          </mask>
+          <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor" />
+          <g class="sun-beams" stroke="currentColor">
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+          </g>
+        </svg>
+      </button>
+
+    </header>
+
+    <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
+
+      {{ content | safe }}
+    </main>
+
+    <footer></footer>
+
+    <!-- Current page: {{ page.url | htmlBaseUrl }} -->
+
+    <script type="module" @html="getJS(page.url)"></script>
+  </body>
+</html>

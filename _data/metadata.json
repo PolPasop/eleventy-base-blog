@@ -1,11 +1,11 @@
 {
-  "title": "Your Blog Name",
-  "url": "https://example.com/",
+  "title": "Jessy Govart, Front-end developer, UX/UI engineer",
+  "url": "https://jessygovart.be",
   "language": "en",
-  "description": "I am writing about my experiences as a naval navel-gazer.",
+  "description": "",
   "author": {
-    "name": "Your Name Here",
-    "email": "youremailaddress@example.com",
-    "url": "https://example.com/about-me/"
+    "name": "Jessy Govart",
+    "email": "jesse.govart@pinnemouche.be",
+    "url": ""
   }
 }
