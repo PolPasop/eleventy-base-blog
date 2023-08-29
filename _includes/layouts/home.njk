@@ -2,3 +2,30 @@
 layout: layouts/base.njk
 templateClass: tmpl-home
 ---
+
+
+<section class="span-12 stack border padding">
+    <hgroup>
+    <h1 class="home-name">Jessy Govart</h1>
+    <h2 class="home-tagline">Frontend developer<br/>User interface engineer</h2>
+  </hgroup>
+
+  <div class="intro">
+    <p>Hi, I'm Jessy, and I have a passion for web standards. I'm freelancing for web development projects.</p>
+    <p>I'm from the @zeldman school of web standards and progressive enhancement.</p>
+  </div>
+</section>
+
+
+
+
+<section class="span-2">
+  {% set projectslist = collections.projects %}
+  {% include "projectslist.njk" %}
+</section>
+
+<section class="span-2 stack">
+  <h2>Education</h2>
+  <p>Haute école Albert Jacquard</p>
+  <p>Bachelor, Web Design/Multimedia</p>
+</section>

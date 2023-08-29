@@ -6,6 +6,7 @@ projectName: European Committee of the Regions
 position: UX-UI Designer-Developer, Sharepoint Front-end Developer, Accessibility expert
 employer: Cronos International
 client: European Committee of the Regions
+projectDescription: Lorem ipsum
 ---
 
 ## Project description

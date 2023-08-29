@@ -1,0 +1,220 @@
+@layer reset,
+theme,
+space,
+layout,
+typography,
+utilities;
+
+/* @link https://utopia.fyi/type/calculator?c=320,18,1.2,1240,20,1.25,5,5,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+  --step--5: clamp(0.41rem, calc(0.47rem + -0.07vw), 0.45rem);
+  --step--4: clamp(0.51rem, calc(0.55rem + -0.05vw), 0.54rem);
+  --step--3: clamp(0.64rem, calc(0.66rem + -0.02vw), 0.65rem);
+  --step--2: clamp(0.78rem, calc(0.77rem + 0.03vw), 0.80rem);
+  --step--1: clamp(0.94rem, calc(0.92rem + 0.11vw), 1.00rem);
+  --step-0: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
+  --step-1: clamp(1.35rem, calc(1.28rem + 0.37vw), 1.56rem);
+  --step-2: clamp(1.62rem, calc(1.50rem + 0.58vw), 1.95rem);
+  --step-3: clamp(1.94rem, calc(1.77rem + 0.87vw), 2.44rem);
+  --step-4: clamp(2.33rem, calc(2.08rem + 1.25vw), 3.05rem);
+  --step-5: clamp(2.80rem, calc(2.45rem + 1.77vw), 3.82rem);
+}
+
+
+
+
+@layer theme {
+
+  /* Baseline for default links */
+  a:not([class]) {
+    /* Relatively sized thickness and offset */
+    text-decoration-thickness: max(0.08em, 1px);
+    text-underline-offset: 0.15em;
+  }
+
+  :focus-visible {
+    --outline-size: max(2px, 0.15em);
+
+    outline: var(--outline-width, var(--outline-size)) var(--outline-style, solid) var(--outline-color, currentColor);
+    outline-offset: var(--outline-offset, var(--outline-size));
+  }
+
+  /* Scroll padding allowance above anchor links */
+  :target {
+    scroll-padding-block-start: 2rem;
+  }
+
+  /* Scroll padding allowance below focused elements 
+    to ensure they are clearly in view */
+  :focus {
+    scroll-padding-block-end: 8vh;
+  }
+}
+
+@layer theme {
+  :root {
+    /* Color styles */
+    --primary: hsl(265, 38%, 13%);
+    --secondary: hsl(283, 6%, 45%);
+    --tertiary: hsl(257, 15%, 91%);
+    --light: hsl(270, 100%, 99%);
+    --accent: hsl(278, 100%, 92%);
+    --accent--alt: hsl(279, 100%, 97%);
+    --accent--ui: hsl(284, 55%, 66%);
+  }
+
+  html {
+    color-scheme: dark;
+    accent-color: var(--accent--ui);
+  }
+}
+
+@layer space {
+  /* @link https://utopia.fyi/space/calculator?c=320,18,1.2,1240,20,1.25,5,5,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+  :root {
+    --space-3xs: clamp(0.31rem, calc(0.31rem + 0.00vw), 0.31rem);
+    --space-2xs: clamp(0.56rem, calc(0.54rem + 0.11vw), 0.63rem);
+    --space-xs: clamp(0.88rem, calc(0.85rem + 0.11vw), 0.94rem);
+    --space-s: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
+    --space-m: clamp(1.69rem, calc(1.62rem + 0.33vw), 1.88rem);
+    --space-l: clamp(2.25rem, calc(2.16rem + 0.43vw), 2.50rem);
+    --space-xl: clamp(3.38rem, calc(3.24rem + 0.65vw), 3.75rem);
+    --space-2xl: clamp(4.50rem, calc(4.33rem + 0.87vw), 5.00rem);
+    --space-3xl: clamp(6.75rem, calc(6.49rem + 1.30vw), 7.50rem);
+
+    /* One-up pairs */
+    --space-3xs-2xs: clamp(0.31rem, calc(0.20rem + 0.54vw), 0.63rem);
+    --space-2xs-xs: clamp(0.56rem, calc(0.43rem + 0.65vw), 0.94rem);
+    --space-xs-s: clamp(0.88rem, calc(0.74rem + 0.65vw), 1.25rem);
+    --space-s-m: clamp(1.13rem, calc(0.86rem + 1.30vw), 1.88rem);
+    --space-m-l: clamp(1.69rem, calc(1.40rem + 1.41vw), 2.50rem);
+    --space-l-xl: clamp(2.25rem, calc(1.73rem + 2.61vw), 3.75rem);
+    --space-xl-2xl: clamp(3.38rem, calc(2.81rem + 2.83vw), 5.00rem);
+    --space-2xl-3xl: clamp(4.50rem, calc(3.46rem + 5.22vw), 7.50rem);
+
+    /* Custom pairs */
+    --space-s-l: clamp(1.13rem, calc(0.65rem + 2.39vw), 2.50rem);
+  }
+}
+
+
+@layer layout {
+  :root {
+    /* Layout default props */
+    --layout-column-min: 30ch;
+    --layout-gap: 3vmax;
+    --measure: 60ch;
+  }
+
+  .box {
+    padding: var(--space-s);
+  }
+
+
+
+
+  .layout-grid {
+    /* Replace previous values in the existing rule */
+    --layout-grid-min: var(--layout-column-min);
+    --layout-grid-gap: var(--layout-gap);
+  }
+
+  .flex-layout-grid {
+    --flex-grid-min: var(--layout-column-min);
+    --flex-grid-gap: var(--layout-gap);
+
+    display: flex;
+    flex-wrap: wrap;
+
+    >* {
+      flex: 1 1 var(--flex-grid-min);
+    }
+
+  }
+
+  :is(.layout-grid, .flex-layout-grid)>* {
+    container: var(--grid-item-container, grid-item) / inline-size;
+  }
+
+
+
+  .stack {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .stack>* {
+    margin-block: 0;
+  }
+
+  .stack>*+* {
+    margin-block-start: var(--space, 1.5rem);
+  }
+
+  .stack--xs>*+* {
+    margin-block-start: var(--space-xs, 1.5rem);
+  }
+
+
+
+  .with-sidebar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2xs);
+  }
+
+  .with-sidebar> :first-child {
+    flex-grow: 1;
+    flex-basis: 500px;
+  }
+
+  .with-sidebar> :last-child {
+    flex-basis: 0;
+    flex-grow: 999;
+    min-inline-size: 50%;
+  }
+}
+
+@layer typography {
+  html {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: var(--step--1);
+    font-weight: 200;
+  }
+
+  h1 {
+    font-size: var(--step-2);
+    font-weight: 300;
+  }
+
+  h2 {
+    font-size: var(--step-0);
+    font-weight: 300;
+  }
+
+  h3 {
+    font-size: var(--step--2);
+  }
+}
+
+
+@layer utilities {
+  .bold {
+    font-weight: 500;
+  }
+
+  .inline {
+    display: inline;
+  }
+
+  .font-weight-100 {
+    font-weight: 100;
+  }
+
+  .font-weight-300 {
+    font-weight: 300;
+  }
+}

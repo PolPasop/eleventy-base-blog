@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/cv.css">
+</head>
+<body>
+
+  <header class="box stack stack--xs">
+    <h1>Jessy Govart</h1>
+    <h2 class="bold">UX/UI Engineer, Front-end developer</h2>
+    <p>♡ Web standards, simplicity, minimalism</p>
+  </header>
+  <div class="with-sidebar">
+
+    <div class="">
+      <section class="box stack">
+        
+       <section>
+        <h2>How can I help you?</h2>
+        <p>Passionate front-end developer with 13 years of experience. I create the user interface and user experience of a website or web application. I work on the visual aspects of a website that users interact with directly. This includes designing and implementing layouts, user interfaces, and interactive elements using programming languages like HTML, CSS, and JavaScript. I ensure that websites are visually appealing, responsive, and easy to navigate across different devices and browsers.</p>
+       </section>
+        
+        <section>
+          <h2>Contact</h2>
+
+          <ul>
+            <li>
+              <span class="font-weight-100">Address:</span>
+              <address class="inline">
+                Halsendallaan 36,
+                1652 Alsemberg,
+                Belgium
+              </address>
+            </li>
+            <li><span class="font-weight-100">Website:</span> <a href="https://jessygovart.be">jessygovart.be</a></li>
+            <li><span class="font-weight-100">Mail:</span> <a href="mailto:m.bluth@example.com">jessy.govart@pinnemouche.be</a></li>
+            <li><span class="font-weight-100">Tel:</span> <a href="tel:+32456025670">+32 456 02 56 70</a></li>
+            <li><a href="https://www.linkedin.com/in/jessy-govart-4b1389b/">Linkedin</a></li>
+            <li><a href="https://www.github.com/PolPasop/">Github</a></li>
+          </ul>
+        </section>
+
+         <h2>Skills</h2>
+        <ul>
+          <li>Front-End Languages: HTML5, CSS3, JavaScript (ES6)</li>
+          <li>Web Components</li>
+          <li>UI/UX Design Implementation</li>
+          <li>Responsive Web Design</li>
+          <li>Cross-Browser Compatibility</li>
+          <li>Performance Optimization</li>
+          <li>Version Control (Git)</li>
+          <li>Web Accessibility (WCAG)</li>
+          <li>Front-End Frameworks: React, Vue.js (basic)</li>
+          <li>CSS Preprocessors: SASS, LESS</li>
+          <li>Build Tools: Webpack, Gulp</li>
+          <li>Static site generator: Eleventy</li>
+          <li>Debugging and Troubleshooting</li>
+          <li>Collaborative Teamwork</li>
+        </ul>
+
+        <h2>Languages</h2>
+        <ul>
+          <li>
+            French (Native)
+          </li>
+          <li>
+            English (Professional working proficiency)
+          </li>
+          <li>
+            Dutch (Limited working proficiency)
+          </li>
+        </ul>
+
+        <h2>Certification</h2>
+        <ul>
+          <li>
+            Microsoft Specialist: Programming in HTML5 with JavaScript and CSS3
+          </li>
+        </ul>
+
+        <h2>Current focus</h2>
+        <ul>
+          <li>
+            Hypermedia, htmx
+          </li>
+          <li>
+            Alpine.js
+          </li>
+        </ul>
+
+        
+
+    
+      </section>
+
+      
+
+      
+
+    </div>
+
+    <div>
+      <main class="box stack">
+        
+       
+
+        <section>
+          <h2>Expérience</h2>
+          <ul class="stack projects">
+            {% set projectslist = collections.projects %}
+            {% for project in projectslist | reverse %}
+            <li class="">
+              <span class="font-weight-300">{{ project.data.startDate}} → {{ project.data.endDate}}</span><br/>
+              {% if project.data.projectName %}
+              <span class="font-weight-100">Project:</span> <span>{{ project.data.projectName }}</span><br/>
+              {% endif %}
+              {% if project.data.client %}
+              <span class="font-weight-100">Client:</span> <span>{{ project.data.client}}</span><br/>
+              {% endif %}
+              {% if project.data.position %}
+              <span class="font-weight-100">Position:</span> <span>{{ project.data.position}}</span>
+              {% endif %}
+            </li>
+            {% endfor %}
+          </ul>
+        </section>
+
+        <section>
+          <h2>Education</h2>
+          <p>
+          <strong>Bachelor's Degree in Web Design / Multimedia</strong><br/>
+          Haute école Albert Jacquard<br/>
+          2007-2010</p>
+        </section>
+
+      </main>
+    </div>
+
+  </div>
+
+  
+
+</body>
+</html>
+

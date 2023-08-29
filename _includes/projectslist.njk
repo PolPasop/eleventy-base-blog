@@ -2,9 +2,9 @@
   <h2>Projects</h2>
   <ol class="projects-list grid">
     {% for project in projectslist | reverse %}
-    <li class="border padding">
-      <a href="{{ project.url }}" class="projectlist__link">{{ project.data.projectName }}</a>
+    <li class="stack stack--3xs">
       <span class="projectlist__date">{{ project.data.startDate}} - {{ project.data.endDate}}</span>
+      <a href="{{ project.url }}" class="projectlist__link">{{ project.data.projectName }}</a>
       <span>{{ project.data.client}}</span>
       <span>{{ project.data.position}}</span>
     </li>

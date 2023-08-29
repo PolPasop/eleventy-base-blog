@@ -24,7 +24,7 @@ html {
   --color-gray-90: #333;
 
   --background-color: #b3e0e1;
-  --bacground-color- --text-color: var(--color);
+  --text-color: var(--color);
   --text-color-link: var(--color);
   --text-color-link-active: var(--color);
   --text-color-link-visited: var(--color);
@@ -38,7 +38,16 @@ html[data-theme=dark]
   {
   --color: #b3e0e1;
 
-
+  --bg-color-0: #edf8f8;
+  --bg-color-10: #c8e9e9;
+  --bg-color-20: #a4dadb;
+  --bg-color-30: #7fcbcc;
+  --bg-color-40: #5abcbe;
+  --bg-color-50: #41a2a5;
+  --bg-color-60: #337e80;
+  --bg-color-70: #245a5b;
+  --bg-color-80: #163637;
+  --bg-color-90: #071212;
 
   --color-0: #f2f2f2;
   --color-10: #d9d9d9;
@@ -405,6 +414,10 @@ h2 {
   grid-column: span 2;
 }
 
+.span-6 {
+  grid-column: span 6;
+}
+
 .span-12 {
   grid-column: span 12;
 }
@@ -427,12 +440,12 @@ h2 {
   justify-content: flex-start;
 }
 
-.stack>* {
-  margin-block: 0;
-}
-
 .stack>*+* {
   margin-block-start: var(--space-m, 1.5rem);
+}
+
+.stack--3xs>*+* {
+  margin-block-start: var(--space-3xs, 1.5rem);
 }
 
 .stack--2xl>*+* {
@@ -590,15 +603,17 @@ a[href].direct-link:focus:visited,
 /* Projects List */
 .projects-list {
   display: grid;
-  gap: 0;
-  grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
+  gap: var(--space-m);
+  grid-template-columns: repeat(auto-fit, minmax(min(500px, 100%), 1fr));
   list-style: none;
-  margin: 0;
   padding: 0;
 }
 
 .projects-list>li {
+  background-color: var(--color-90);
+  border-top: solid 3px var(--bg-color-50);
   display: grid;
+  padding: var(--space-xl);
 }
 
 .projectlist__date {
