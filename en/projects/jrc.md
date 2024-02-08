@@ -1,7 +1,7 @@
 ---
 date: '2023-08-24'
 startDate: 01/2023
-endDate: 11/2023
+endDate: today
 projectName: JRC Sharepoint Online migration
 position: Sharepoint expert, Application/Cloud architect
 employer: Cronos International
