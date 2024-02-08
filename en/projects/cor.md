@@ -7,6 +7,7 @@ position: UX-UI Designer-Developer, Sharepoint Front-end Developer, Accessibilit
 employer: Cronos International
 client: European Committee of the Regions
 projectDescription: Lorem ipsum
+technologies: HTML, CSS, JavaScript, Git, NPM, Figma, Sharepoint, Design system, Web Components 
 ---
 
 ## Project description

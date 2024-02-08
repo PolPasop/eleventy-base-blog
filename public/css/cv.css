@@ -182,7 +182,7 @@ utilities;
   html {
     font-family: 'IBM Plex Mono', monospace;
     font-size: var(--step--1);
-    font-weight: 200;
+    font-weight: 400;
   }
 
   h1 {

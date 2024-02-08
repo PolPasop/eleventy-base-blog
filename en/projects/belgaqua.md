@@ -7,6 +7,7 @@ position: Front-end developer / UX Designer
 employer: Pinnemouche Studio SPRL
 client: Belgaqua
 website: belgaqua.be
+technologies: HTML, CSS
 ---
 
 ## Project description

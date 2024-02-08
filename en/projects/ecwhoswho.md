@@ -6,6 +6,7 @@ projectName: My IntraComm, Who's who
 position: Front-end Developer
 employer: Cronos International
 client: European commission - Digit D1
+technologies: HTML, CSS, JavaScript, Bootstrap, jQuery, Sharepoint
 ---
 
 ## Project description

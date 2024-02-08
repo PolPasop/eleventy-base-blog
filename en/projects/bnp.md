@@ -6,6 +6,7 @@ projectName: BNPParibasFortis
 position: Front-end development with SIM Selligent tool
 employer: Maltem
 client: BNPParibasFortis
+technologies: HTML, CSS, Javascript/jQuery, Adobe Photoshop, Newsletter slicing, SIM
 ---
 
 ## Project description

@@ -40,7 +40,7 @@
                 Belgium
               </address>
             </li>
-            <li><span class="font-weight-100">Website:</span> <a href="https://jessygovart.be">jessygovart.be</a></li>
+            <li><span class="font-weight-100">Website:</span> <a href="https://jessy.govart.be">jessy.govart.be</a></li>
             <li><span class="font-weight-100">Mail:</span> <a href="mailto:m.bluth@example.com">jessy.govart@pinnemouche.be</a></li>
             <li><span class="font-weight-100">Tel:</span> <a href="tel:+32456025670">+32 456 02 56 70</a></li>
             <li><a href="https://www.linkedin.com/in/jessy-govart-4b1389b/">Linkedin</a></li>
@@ -58,8 +58,9 @@
           <li>Performance Optimization</li>
           <li>Version Control (Git)</li>
           <li>Web Accessibility (WCAG)</li>
-          <li>Front-End Frameworks: React, Vue.js (basic)</li>
+          <li>Front-End Frameworks: React (basic), Vue.js (basic), jQuery</li>
           <li>CSS Preprocessors: SASS, LESS</li>
+          <li>CSS library: Bootstrap</li>
           <li>Build Tools: Webpack, Gulp</li>
           <li>Static site generator: Eleventy</li>
           <li>Debugging and Troubleshooting</li>
@@ -126,7 +127,10 @@
               <span class="font-weight-100">Client:</span> <span>{{ project.data.client}}</span><br/>
               {% endif %}
               {% if project.data.position %}
-              <span class="font-weight-100">Position:</span> <span>{{ project.data.position}}</span>
+              <span class="font-weight-100">Position:</span> <span>{{ project.data.position}}</span><br/>
+              {% endif %}
+              {% if project.data.technologies %}
+              <span class="font-weight-100">Technologies:</span> <span>{{ project.data.technologies}}</span>
               {% endif %}
             </li>
             {% endfor %}

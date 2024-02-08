@@ -6,6 +6,7 @@ projectName: My Intracomm upgrade
 position: Front-end Developer
 employer: Cronos International
 client: European Commission - Digit A3
+technologies: HTML, CSS/Less, JavaScript, Bootstrap, jQuery, Sharepoint
 ---
 
 ## Project description

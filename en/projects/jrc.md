@@ -8,6 +8,7 @@ employer: Cronos International
 client: European commission - JRC
 layout: layouts/project.njk
 projectDescription: Lorem ipsum
+technologies: Sharepoint Online, Figma
 ---
 
 ### Project description

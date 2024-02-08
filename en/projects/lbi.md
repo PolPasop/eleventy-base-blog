@@ -5,6 +5,7 @@ endDate: 12/2011
 projectName: LBi
 position: Front-end developer
 employer: LBI
+technologies: HTML, CSS, JavaScript, Bootstrap, jQuery
 ---
 
 I started to work at LBI Group(Ex DAD) as Front-End Developer and was involved in the development of several web sites:

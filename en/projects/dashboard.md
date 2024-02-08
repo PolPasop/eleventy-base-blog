@@ -6,6 +6,8 @@ projectName: Dashboard
 position: UX-UI Designer-Developer
 employer: Cronos International
 client: European Committee of the Regions
+technologies: HTML, CSS, JavaScript, Git, NPM, Figma, Sharepoint, Design system, Web Components 
+
 ---
 
 ## Project description

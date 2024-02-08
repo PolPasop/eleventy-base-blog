@@ -8,5 +8,6 @@ employer: Pinnemouche Studio
 client: Pinnemouche Studio
 layout: layouts/project.njk
 projectDescription: 
+technologies: jamstack, Wordpress
 ---
 
